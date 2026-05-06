@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Smart Expense Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>💰 Smart Expense Tracker</h1>
+
+        <!-- Expense Form -->
+        <div class="form">
+
+            <input
+                type="text"
+                id="title"
+                placeholder="Expense Title">
+
+            <input
+                type="number"
+                id="amount"
+                placeholder="Amount">
+
+            <input
+                type="text"
+                id="category"
+                placeholder="Category">
+
+            <input
+                type="date"
+                id="date">
+
+            <button onclick="addExpense()">
+                Add Expense
+            </button>
+
+        </div>
+
+        <!-- Total Spending -->
+        <h2>
+            Total Spending:
+            ₹<span id="total">0</span>
+        </h2>
+
+        <!-- Download Report Button -->
+        <button onclick="downloadReport()">
+            Download PDF Report
+        </button>
+
+        <!-- Smart Insights -->
+        <h2
+            id="insight"
+            style="text-align:center;">
+        </h2>
+
+        <!-- Expense Table -->
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Title</th>
+                    <th>Amount</th>
+                    <th>Category</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="expense-list"></tbody>
+
+        </table>
+
+        <!-- Chart -->
+        <div class="chart-container">
+
+            <canvas id="expenseChart"></canvas>
+
+        </div>
+
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
